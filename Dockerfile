@@ -7,6 +7,7 @@ ENV APP_GIT=https://github.com/varesa/mustikkaBot.git
 ENV USER=$APP
 ENV DIR=/$APP
 
+RUN useradd $USER
 RUN mkdir $DIR && chown $USER:$USER $DIR
 
 USER $USER
