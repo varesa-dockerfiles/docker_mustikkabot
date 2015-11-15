@@ -8,7 +8,9 @@ ENV USER=$APP
 ENV DIR=/$APP
 
 RUN useradd $USER
+
 RUN mkdir $DIR && chown $USER:$USER $DIR
+VOLUME $DIR
 
 USER $USER
 WORKDIR $DIR
