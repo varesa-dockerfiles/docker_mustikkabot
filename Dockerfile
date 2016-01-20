@@ -1,6 +1,8 @@
 FROM registry.esav.fi:5000/python3
 MAINTAINER Esa Varemo <esa@kuivanto.fi>
 
+RUN pip3 install jsonpickle
+
 ENV APP=mustikkabot
 ENV APP_GIT=https://github.com/varesa/mustikkaBot.git
 
