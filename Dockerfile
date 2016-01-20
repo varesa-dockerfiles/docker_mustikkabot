@@ -10,7 +10,6 @@ ENV DIR=/$APP
 RUN useradd $USER
 
 RUN mkdir $DIR && chown $USER:$USER $DIR
-VOLUME $DIR
 
 USER $USER
 WORKDIR $DIR
@@ -18,3 +17,5 @@ WORKDIR $DIR
 RUN git clone $APP_GIT $DIR
 
 CMD ['bash', 'start.sh']
+
+VOLUME $DIR
