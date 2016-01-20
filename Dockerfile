@@ -16,6 +16,6 @@ WORKDIR $DIR
 
 RUN git clone $APP_GIT $DIR
 
-CMD ['bash', 'start.sh']
+CMD [ "bash", "start.sh" ]
 
 VOLUME $DIR
